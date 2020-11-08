@@ -18,8 +18,7 @@ function makeApiCall(page){
 	I know this is not in the requirement of homework, but i'm still interesting in it.
 	var url = 'https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=54fdad38656ad59409d3aa47e6e0f666&tags=' + keyword + '&privacy_filter=1&safe_search=1&extras=url_sq&per_page=' + display_num + '&page=' + u_page + '&format=json&nojsoncallback=1';
 	*/
-	var url = 'https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=54fdad38656ad59409d3aa47e6e0f666&tags=' + keyword + '&privacy_filter=1&safe_search=1&extras=url_sq&page=' + u_page + '&format=json&nojsoncallback=1';
-
+	var url = 'https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=54fdad38656ad59409d3aa47e6e0f666&tags=' + keyword + '&privacy_filter=1&safe_search=1&extras=url_sq&per_page=' + display_num + '&page=' + u_page + '&format=json&nojsoncallback=1';
 	$.ajax({url: url, dataType: "json"}).then(function(photos) {
 		console.log(photos)
 		for (var i = 0; i < display_num; i++) {
@@ -37,8 +36,7 @@ function makeApiCall(page){
             	<div class="card-body">
             		<p class="card-text"> ${photos.photos.photo[i].title} </p>
             	</div>
-            </div>`
-	    */
+            </div>`*/
         }
   	})
 }
