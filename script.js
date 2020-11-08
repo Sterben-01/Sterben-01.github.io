@@ -25,7 +25,7 @@ function makeApiCall(page){
 			var linkfortest = `https://live.staticflickr.com/${photos.photos.photo[i].server}/${photos.photos.photo[i].id}_${photos.photos.photo[i].secret}_b.jpg`;
 			document.getElementById('photocard').innerHTML +=
             `<div class="card" style="width: 20%;">
-            	<a href="${linkfortest}" target=“_blank“> <img class="card-img-top" src = '${photos.photos.photo[i].url_sq}' alt = '${photos.photos.photo[i].id}'> </a>
+            	<a href="${linkfortest}" target="_blank"> <img class="card-img-top" src = '${photos.photos.photo[i].url_sq}' alt = '${photos.photos.photo[i].id}'> </a>
             	<div class="card-body">
             		<p class="card-text"> ${photos.photos.photo[i].title} </p>
             	</div>
