@@ -30,13 +30,6 @@ function makeApiCall(page){
             		<p class="card-text"> ${photos.photos.photo[i].title} </p>
             	</div>
             </div>`
-            
-            /*`<div class="card" style="width: 20%;">
-            	<img class="card-img-top" src = '${photos.photos.photo[i].url_sq}' alt = '${photos.photos.photo[i].id}'>
-            	<div class="card-body">
-            		<p class="card-text"> ${photos.photos.photo[i].title} </p>
-            	</div>
-            </div>`*/
         }
   	})
 }
