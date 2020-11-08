@@ -23,22 +23,21 @@ function makeApiCall(page){
 	$.ajax({url: url, dataType: "json"}).then(function(photos) {
 		console.log(photos)
 		for (var i = 0; i < display_num; i++) {
+			var linkfortest = `https://live.staticflickr.com/${photos.photos.photo[i].server}/${photos.photos.photo[i].id}_${photos.photos.photo[i].secret}_b.jpg`;
 			document.getElementById('photocard').innerHTML +=
-			/*
-			Below is let image clickable. But I don't know how to use API to return url_sq and url_o at the same time. HAHA.
             `<div class="card" style="width: 20%;">
-            	<a href="${photos.photos.photo[i].url_sq}" target=“_blank“> <img class="card-img-top" src = '${photos.photos.photo[i].url_sq}' alt = '${photos.photos.photo[i].id}'> </a>
+            	<a href="${linkfortest}" target=“_blank“> <img class="card-img-top" src = '${photos.photos.photo[i].url_sq}' alt = '${photos.photos.photo[i].id}'> </a>
             	<div class="card-body">
             		<p class="card-text"> ${photos.photos.photo[i].title} </p>
             	</div>
             </div>`
-            */
-            `<div class="card" style="width: 20%;">
+            
+            /*`<div class="card" style="width: 20%;">
             	<img class="card-img-top" src = '${photos.photos.photo[i].url_sq}' alt = '${photos.photos.photo[i].id}'>
             	<div class="card-body">
             		<p class="card-text"> ${photos.photos.photo[i].title} </p>
             	</div>
-            </div>`
+            </div>`*/
         }
   	})
 }
