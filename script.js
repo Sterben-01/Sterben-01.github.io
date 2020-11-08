@@ -37,7 +37,8 @@ function makeApiCall(page){
             	<div class="card-body">
             		<p class="card-text"> ${photos.photos.photo[i].title} </p>
             	</div>
-            </div>`*/
+            </div>`
+	    */
         }
   	})
 }
